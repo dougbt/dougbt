@@ -20,10 +20,12 @@
 <h2 align="left">👨🏻‍💻 About Me:</h2>
 
 - :computer: I'm a Java Backend Developer at GFT.
-
 - :hourglass_flowing_sand: Exploring AWS and Spring Boot.
-
 - :rocket: Always ready to collaborate on development experiments.
 
 <h2 align="left">:heart: Let's get connected:</h2>
-[![LinkedIn Badge](https://img.shields.io/badge/-douglasbarcellos-blue?style=flat-square&logo=Linkedin&logoColor=white&link=https://www.linkedin.com/in/douglas-barcellos-b9b572161/)](https://www.linkedin.com/in/douglas-barcellos-b9b572161/)
+<p align="left">
+  <a href="https://www.linkedin.com/in/douglas-barcellos-b9b572161/" target="_blank">
+    <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/linkedin/linkedin-original.svg" alt="LinkedIn" width="40" height="40"/>
+  </a>
+</p>
