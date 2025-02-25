@@ -2,5 +2,6 @@
 
 ![Linguagens mais usadas](https://github-readme-stats.vercel.app/api/top-langs/?username=dougbt&layout=compact&theme=dracula)
 
-![Snake animation](https://github.com/dougbt/dougbt/blob/output/dist/github-snake.svg)
+![Snake animation](https://raw.githubusercontent.com/dougbt/dougbt/main/dist/github-snake.svg)
+
 
