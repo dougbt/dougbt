@@ -1,36 +1,32 @@
-name: Generate Snake Game
+name: Generate Snake Animation
 
 on:
-  schedule:
-    - cron: "0 0 * * *"  # Executa todos os dias à meia-noite UTC
-  workflow_dispatch:  # Permite execução manual
+  push:
+    branches:
+      - main
+  pull_request:
+    branches:
+      - main
 
 jobs:
-  generate:
+  build:
     runs-on: ubuntu-latest
+
     steps:
-      - name: Checkout do repositório
-        uses: actions/checkout@v3
+      - name: Checkout repository
+        uses: actions/checkout@v2
 
-      - name: Gerar animação da cobrinha
-        uses: Platane/snk@v3
+      - name: Generate Snake Animation
+        uses: Platane/snk@master
         with:
-          github_user_name: dougbt
-          outputs: |
-            dist/github-snake.svg
-            dist/github-snake-dark.svg?palette=github-dark
-            dist/github-snake-light.svg?palette=github-light
+          github_user: "dougbt" 
+          svg_out: "snake.svg"
+          html_out: "snake.html"
 
-      - name: Subir arquivos gerados
-        uses: actions/upload-artifact@v3
+      - name: Upload Artifact
+        uses: actions/upload-artifact@v3.1.2  
         with:
-          name: snake-outputs
-          path: dist
-
-      - name: Commit e push dos arquivos gerados
-        run: |
-          git config --global user.name "github-actions"
-          git config --global user.email "github-actions@github.com"
-          git add dist/github-snake.svg dist/github-snake-dark.svg dist/github-snake-light.svg
-          git commit -m "Atualizando animação da cobrinha"
-          git push
+          name: snake-artifact
+          path: |
+            snake.svg
+            snake.html
