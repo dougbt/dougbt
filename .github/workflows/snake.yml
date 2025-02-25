@@ -24,9 +24,10 @@ jobs:
           html_out: "snake.html"
 
       - name: Upload Artifact
-        uses: actions/upload-artifact@v3 
+        uses: actions/upload-artifact@v4
         with:
           name: snake-artifact
           path: |
             snake.svg
             snake.html
+
