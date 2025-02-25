@@ -19,12 +19,12 @@ jobs:
       - name: Generate Snake Animation
         uses: Platane/snk@master
         with:
-          github_user: "dougbt" 
+          github_user: "dougbt"  
           svg_out: "snake.svg"
           html_out: "snake.html"
 
       - name: Upload Artifact
-        uses: actions/upload-artifact@v3.1.2  
+        uses: actions/upload-artifact@v3 
         with:
           name: snake-artifact
           path: |
