@@ -23,11 +23,10 @@ jobs:
           svg_out: "snake.svg"
           html_out: "snake.html"
 
-      - name: Upload Artifact
-        uses: actions/upload-artifact@v4
+      - name: Commit and push generated files
+        uses: EndBug/add-and-commit@v7
         with:
-          name: snake-artifact
-          path: |
-            snake.svg
-            snake.html
-
+          author_name: 'GitHub Actions'
+          author_email: 'actions@github.com'
+          message: 'Add generated snake animation files'
+          add: 'snake.svg, snake.html'
